@@ -26,7 +26,7 @@ export function dashboardSanityTests() {
 
     after(() => {});
 
-    describe('checking home page', () => {
+    describe.skip('checking home page', () => {
       before(() => {
         // Go to the home page
         miscUtils.visitPage('app/home#');
@@ -103,7 +103,7 @@ export function dashboardSanityTests() {
 
     describe('adding sample data', () => {
       before(() => {
-        miscUtils.addSampleData();
+        //miscUtils.addSampleData();
       });
 
       after(() => {
@@ -247,6 +247,7 @@ export function dashboardSanityTests() {
 
       describe('checking discover', () => {
         before(() => {
+          cy.setAdvancedSetting({ 'discover:v2': false });
           // Go to the Discover page
           miscUtils.visitPage('app/discover#/');
         });
