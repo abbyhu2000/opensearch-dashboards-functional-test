@@ -64,7 +64,7 @@ describe('discover histogram', { scrollBehavior: false }, () => {
     testFixtureHandler.clearJSONMapping(
       'cypress/fixtures/dashboard/opensearch_dashboards/data_explorer/long_window_logstash/mappings.json.txt'
     );
-    cy.deleteIndex('long-window-logstash-*');
+    cy.deleteIndex('long-window-logstash-0');
     cy.deleteSavedObjectByType('index-pattern');
   });
 
