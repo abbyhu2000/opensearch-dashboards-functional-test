@@ -45,7 +45,9 @@ describe('discover field visualize button', () => {
     });
   });
 
-  after(() => {});
+  after(() => {
+    cy.deleteSavedObjectByType('index-pattern');
+  });
 
   beforeEach(() => {
     miscUtils.visitPage(
