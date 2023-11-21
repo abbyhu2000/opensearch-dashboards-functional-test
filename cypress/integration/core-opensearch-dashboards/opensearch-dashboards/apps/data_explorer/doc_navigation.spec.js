@@ -88,6 +88,7 @@ describe('doc link in discover', () => {
     cy.waitForLoader();
 
     cy.waitForSearch();
+    cy.wait(500);
 
     cy.getElementByTestId(`docTableExpandToggleColumn-0`)
       .should('be.visible')
